@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/css/lgstyles.css">
-    <title>Gorriao inicio de sesión</title>
+    <link rel="stylesheet" href="../../public/css/carstyles.css">
+    <title>Carrito de compras</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&display=swap');
-    </style>
-
 </head>
 
 <header>
@@ -49,19 +45,56 @@
     </nav>
 </header>
 
-
-
 <body>
-    <section class="form-login">
-        <h2>Iniciar sesión en su cuenta</h2>
-        <label class="text">Dirección de correo:</label>
-        <input class="log" type="mail" name="dmail" id="dmail">
-        <label class="text">Contraseña:</label>
-        <input class="log" type="password" name="nombres" id="nombres">
-        <input class="sub" type="checkbox"><label class="text">Recordar mail y contraseña</label>
-        <p><a href="#">¿Olvidó su contraseña?</a></p>
-        <input class="boton" type="submit" value="Ingresar">
-        <p><a href="#">¿No tienes cuenta? Cree una aquí</a> </p>
+    <section class="car">
+        <h1>Tu carrito</h1>
+            <article class="buy">
+                <img class="produ" src="../../public/img/gorracelesteyazul.jpg">
+                <a href="#">Gorra IKT</a>
+                <p>$6.770</p>
+                <p>40% off</p>
+                <a href="#">
+                    <i class="fa-solid fa-minus"></i>
+                    </a>
+                    <a href="#">
+                    <i class="fa-solid fa-plus"></i>
+                    </a>
+            </article>
+                            <hr>
+
+            <article class="buy">
+                <img class="produ" src="../../public/img/gorramorada.jpg">
+                <a href="#">Gorra IKT</a>
+                <p>$6.770</p>
+                <p>40% off</p>
+                <a href="#">
+                <i class="fa-solid fa-minus"></i>
+                </a>
+                <a href="#">
+                <i class="fa-solid fa-plus"></i>
+                </a>
+            </article>
+            <hr>
+
+            <article class="buy">
+                <img class="produ" src="../../public/img/gorranaranja.jpg">
+                <a href="#">Gorra IKT</a>
+                <p>$6.770</p>
+                <p>40% off</p>
+                <a href="#">
+                <i class="fa-solid fa-minus"></i>
+                </a>
+                <a href="#">
+                <i class="fa-solid fa-plus"></i>
+                </a>
+            </article>
+            <hr>
+        <article class="last">
+            <p>Total: ...$$$...</p>
+            
+                <button class="fin">Finalizar compra</button>
+            
+        </article>
     </section>
 </body>
 
@@ -135,7 +168,5 @@
 
 
 </footer>
-
-
 
 </html>
