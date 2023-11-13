@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/estiloRegistro.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="cajalogo">
+                <img src="img/logo.jpg" class="logoprincipal">
+            </div>
+
+            <div class="searchbar">
+                <span class="search-bar"> <input type="text" placeholder="Buscar productos..."> <button><svg
+                            xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg></button> </span>
+            </div>
+
+            <div class="user-cart">
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Mayoristas</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label class="campo" for="nombre">Nombre:</label>
+                <input class="campo-input" type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="apellido">Apellido:</label>
+                <input class="campo-input" type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="dni">DNI:</label>
+                <input class="campo-input" type="tel" id="dni" name="dni" pattern="[0-9]{8}" required>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="email">Correo electrónico:</label>
+                <input class="campo-input" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="password">Contraseña:</label>
+                <div class="input-container">
+                    <input class="campo-input password" type="password" id="password" name="password" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="repeatPassword">Repetir contraseña:</label>
+                <input class="campo-input password" type="password" id="repeatPassword" name="repeatPassword" required>
+            </div>
+            <div class="input-container">
+                <button class="eye-button" type="button" id="togglePassword">Mostrar/Ocultar</button>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="subscribe">¿Desea suscribirse para recibir las últimas novedades y ofertas de nuestros productos a su correo?</label>
+                <input type="checkbox" id="subscribe" name="subscribe" style="vertical-align: middle;">
+            </div>
+            <button class="register" type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <script src="/app.js"></script>
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordInputs = document.querySelectorAll('.password');
+            passwordInputs.forEach(function (input) {
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+            });
+        });
+
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const password = document.getElementById('password').value;
+            const repeatPassword = document.getElementById('repeatPassword').value;
+
+            if (password !== repeatPassword) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+<footer>
+
+
+    <div class="container-footer-all">
+
+        <div class="container-body">
+
+            <div class="colum1">
+                <h1> Redes Sociales </h1>
+
+                <div class="fila">
+                    <a href="" target="_blank"> <i class="fa-brands fa-square-facebook"></i> </a>
+                    <a href="" target="_blank"> <label> Síguenos en Facebook</label> </a>
+                </div>
+
+                <div class="fila">
+                    <a href="" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+                    <a href="" target="_blank"> <label> Síguenos en Instagram</label> </a>
+                </div>
+            </div>
+
+            <div class="colum2">
+                <h1> Medios de Pago </h1>
+
+                <div class="fila">
+                    <a href="" target="_blank"> <i class="fa-solid fa-credit-card"></i> </a>
+                    <a href="" target="_blank"> <label> Tarjetas </label> </a>
+                </div>
+
+                <div class="fila">
+                    <a href="" target="_blank"> <i class="fa-solid fa-money-bill-transfer"></i> </a>
+                    <a href="" target="_blank"> <label> Transferencia </label> </a>
+                </div>
+
+            </div>
+
+            <div class=" colum3">
+                <h1> Información de Contacto</h1>
+
+                <div class="fila2">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="" target="_blank"> <label> Numero </label></a> <a href="" target="_blank"> <label>/ numero
+                        </label></a>
+                </div>
+
+                <div class="fila2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <label> email </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container-footer">
+            <div class="footer">
+                <div class="copyright">
+                    © 2023 Todos los Derechos Reservados |
+                    <a href=""> Gorriao</a>
+                </div>
+
+                <div class="information">
+                    <a href=""> Términos y condiciones </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</footer>
+
+</html>

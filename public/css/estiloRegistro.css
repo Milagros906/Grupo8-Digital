@@ -1,0 +1,142 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+
+}
+
+header {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin-bottom: 5%;
+    background-color: #ecdbc6;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 250;
+}
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px; /* Espacio alrededor del formulario*/
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Espacio entre cada campo */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Alineados por la izquierda*/
+}
+
+/* Bordes redondeados para los campos de entrada, así se ven más bonitos */
+.campo-input {
+    width: calc(100% - 20px); /* Ancho del campo al 100% menos 20px para el padding */
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Marco negro y bordes redondeados para el botón "Mostrar/Ocultar", el ojito aún no puedo implementarlo */
+.eye-button {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-bottom: 10px; /* Margen izquierdo de 10px */
+
+}
+
+.register {
+    font-family: Arial;
+    color: #000000;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.register:hover {
+    background: #2079b0;
+  }
+  
+
+/* Ajuste a la casilla de suscripción para que sea más pequeña */
+.smaller {
+    font-size: 18px;
+}
+
+/* Estilo para los nombres de los campos */
+.campo {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px; /* Espacio entre el nombre y su respectivo campo */
+}
+
+footer i {
+    text-decoration: none;
+    color: black;
+}
+
+/*============FOOTER====================*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+footer {
+    margin-top: 10%;
+    width: 100%;
+    background: #cccccc;
+    color: #000000;
+}
+
+.container-footer-all {
+    width: 100%;
+}
+
+.container-footer {
+    max-width: 100%;
+    background: #414141;
+}
+
+.footer {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+@media (min-width: 361px) {
+    /* Estilos para tabletas según el ejercicio de mercado pago */
+    .campo-input {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (min-width: 769px) {
+    /* Estilos para computadoras según el ejercicio de mercado pago*/
+    .campo-input {
+        width: calc(50% - 10px);
+    }
+}
