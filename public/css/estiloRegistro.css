@@ -5,52 +5,6 @@
 }
 
 /* Prueba para añadir todo del header y footer */
-.login {
-    color: black;
-    text-decoration: none
-}
-
-.carrito {
-    color: black;
-    text-decoration: none
-}
-
-
-.logoprincipal {
-    width: 25%;
-    height: 100%;
-    border-radius: 50%;
-    padding: 0px;
-    border: 1px solid #333;
-}
-
-.cajalogo {
-    width: 33%;
-}
-
-
-
-.login a {
-    color: black;
-    text-decoration: none;
-}
-
-
-.login a:visited {
-    color: black;
-}
-
-.carrito a {
-    color: black;
-    text-decoration: none;
-}
-
-
-.carrito a:visited {
-    color: black;
-}
-
-/* Hasta aquí */
 
 header {
     position: relative;
@@ -192,9 +146,9 @@ body {
     background-color: white;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     /* Espacio alrededor del formulario */
-    padding-top: 11rem;
+    padding-top: 5rem;
 }
 
 .carrito {
@@ -234,17 +188,6 @@ body {
 
 .carrito a:visited {
     color: black;
-}
-
-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    background-color: #ecdbc6;
-    padding: 10px 0;
-    width: 100%;
-    z-index: 25
 }
 
 .top-bar {
@@ -348,8 +291,6 @@ header {
 
 }
 
-
-
 form {
     background-color: white;
     max-width: 400px;
@@ -430,6 +371,7 @@ footer i {
 }
 
 footer {
+    position: relative;
     width: 100%;
     background: #cccccc;
     color: #000000;
