@@ -11,7 +11,7 @@ app.listen(3030, ()=>{
 });
 
 // Donde están los recursos estáticos
-app.use(express.static('public'));
+app.use(express.static(publicPath));
 
 // Creando nuestras rutas
 app.get("/", function (req, res) {
