@@ -191,7 +191,8 @@ body {
     background-color: white;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px; /* Espacio alrededor del formulario */
+    padding: 20px;
+ } /* Espacio alrededor del formulario */
 
 .carrito {
     color: black;
