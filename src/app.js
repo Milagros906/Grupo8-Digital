@@ -21,3 +21,19 @@ app.get("/", function (req, res) {
 app.get('/register', function(req,res){
     res.sendFile(path.join(__dirname,'/views/register.html'));
 })
+
+app.get("/register", function (req, res) {
+    res.sendFile(path.resolve(__dirname, "./views/register.html"));
+})
+
+app.get("/carrito", function (req, res) {
+    res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
+})
+
+app.get("/product", function (req, res) {
+    res.sendFile(path.resolve(__dirname, "./views/product.html"));
+})
+
+app.get("/login", function (req, res) {
+    res.sendFile(path.resolve(__dirname, "./views/login.html"));
+})
