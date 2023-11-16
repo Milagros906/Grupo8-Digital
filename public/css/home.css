@@ -1,13 +1,13 @@
+/*===========HEADER AND BANNER===========*/
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
 }
 
 body {
-    background-color: #ecdbc6;
-    padding-top: 4rem;
+    background-color: #ebebeb;
+    padding-top: 1rem;
 }
 
 .login {
@@ -22,7 +22,7 @@ body {
 
 
 .logoprincipal {
-    width: 25%;
+    width: 60%;
     height: 100%;
     border-radius: 50%;
     padding: 0px;
@@ -30,10 +30,9 @@ body {
 }
 
 .cajalogo {
-    width: 33%;
+    width: 20%;
+    text-align: center;
 }
-
-
 
 .login a {
     color: black;
@@ -60,22 +59,10 @@ header {
     left: 0;
     top: 0;
     right: 0;
-    background-color: #ecdbc6;
-    padding: 10px 0;
+    background-color: #e5bf91;
     width: 100%;
     z-index: 250;
-}
-
-
-.banner {
-    text-align: center;
-}
-
-.bannerdestacado {
-    max-width: 100%;
-    height: auto;
-    padding-top: 10px;
-    z-index: 250;
+    padding-top: 15px;
 }
 
 .top-bar {
@@ -91,7 +78,6 @@ header {
 .searchbar {
     align-content: center;
     width: 60%;
-    margin-left: -45px;
     display: flex;
 }
 
@@ -110,7 +96,7 @@ header {
     font-size: 16px;
     margin: 0;
     font-family: inherit;
-    border-radius: 2px;
+    border-radius: 10px;
     background-color: #fff;
     display: flex;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
@@ -148,24 +134,46 @@ header {
     gap: 10px;
     width: 20%;
     align-items: center;
+    font-size: 24px;
+}
+
+.fa-custom {
+    color: black;
 }
 
 .navbar {
     text-align: center;
-    text-decoration: none;
 }
 
 .navbar ul {
     list-style: none;
-    padding: 0;
-    text-decoration: none;
+    padding: 15px 10px 15px 10px;
+    margin-top: -8px;
 }
 
 .navbar li {
-
     display: inline;
     margin: 0 15px;
+}
+
+.navbar li a {
     text-decoration: none;
+    color:#000000;
+}
+
+.banner {
+    text-align: center;
+    margin-bottom: -1vb;
+}
+
+.banner-1 {
+    text-align: center;
+    margin-top:11vh;
+}
+
+.bannerdestacado {
+    max-width: 100%;
+    height: auto;
 }
 
 .box {
@@ -180,9 +188,10 @@ header {
 .box a {
     text-align: center;
     text-decoration: none;
-    color: #666;
-    margin-right: 25px;
-    padding-left: 25px;
+    color:#000000 ;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 14px;
 }
 
 .left {
@@ -194,11 +203,11 @@ header {
     padding-right: 15px;
     position: relative;
     width: 100%;
-    min-height: 1px;
+    background-color:#e5bf91;
+    margin-top: -1vb;
 }
 
 main {
-    background-color: #ffeeda;
     padding: 25px;
 }
 
@@ -232,102 +241,90 @@ article {
     width: 100%;
 }
 
-footer i {
-    text-decoration: none;
-    color: black;
-}
-
-@media (min-width: 761px) {
-
-    .producto {
-        width: 25%;
-    }
-
-    .cajaproductos {
-        flex-direction: row;
-    }
-
-    body {
-        background-color: #ecdbc6;
-        padding-top: 10rem;
-    }
-}
-
 
 /*============FOOTER====================*/
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: Tahoma, Arial, sans-serif;
-}
-
 footer {
     width: 100%;
     background: #cccccc;
     color: #000000;
+    position: absolute;
 }
 
 .container-footer-all {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .container-body {
-    margin: 30px;
     display: flex;
-    justify-content: space-between;
+    padding: 25px 10px 25px 10px;
+    flex-direction: column;
 }
 
-.colum1,
-.colum2,
-.colum3 {
-    max-width: 400px;
+.column-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
-.colum1 h1,
-.colum2 h1,
-.colum3 h1 {
-    font-size: 22px;
+.column-1, .column-2, .column-3, .column-4 {
+    width: 40%;
 }
 
-.colum1 p {
-    font-size: 18px;
-    color: #000000;
-    margin-top: 20px;
+.column-1 {
+    display: flex;
+    flex-direction: column;
 }
 
-.fila,
-.fila2 {
+.redes-sociales {
     margin-top: 10px;
     display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: black;
 }
 
-.fila img,
-.fila2 img {
-    width: 36px;
-    height: 36px;
-}
-
-#imgCasa {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fila label,
-.fila2 label {
-    margin-top: 5px;
-    margin-left: 20px;
-    color: #000000;
-    font-size: 18px;
-}
-
-.fila2 label a {
-    color: #000000;
-    font-size: 18px;
+.redes-sociales a {
     text-decoration: none;
+    color: black;
+}
+
+
+.redes-sociales a i {
+    font-size: 20px;
+}
+
+.horario{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.horario label{
+    padding-bottom: 10px;
+}
+
+.medios_pago {
+    margin-top: 10px;
+}
+
+.contacto {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.contacto a {
+    text-decoration: none;
+    color: black;
+}
+
+.contacto a i{
+    font-size: 20px;
 }
 
 .container-footer {
@@ -336,11 +333,9 @@ footer {
 }
 
 .footer {
-    max-width: 1400px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 16px;
 }
 
 .copyright {
@@ -356,4 +351,49 @@ footer {
 .information a {
     text-decoration: none;
     color: #ffffff;
+}
+
+@media (min-width: 761px) {
+    .cajalogo {
+       width: 15%;
+    }
+
+    .searchbar{
+        width: 75%;
+    }
+    
+    .user-cart{
+        width: 10%;
+    }
+    
+    .navbar ul {
+        margin-top: -40px;
+    } 
+
+    .banner-1 {
+        margin-top: -3vb;
+    }
+
+    .producto {
+        width: 25%;
+    }
+
+    .cajaproductos {
+        flex-direction: row;
+    }
+
+    body {
+        background-color: #ebebeb;
+        padding-top: 10rem;
+    }
+
+    .container-body {
+        flex-direction: row;
+    }
+
+    .column-1, .column-2, .column-3, .column-4 {
+        padding-right: 50px;
+        padding-left: 50px;
+        width: 50%;  
+    }
 }

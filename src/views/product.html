@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorriao - Producto</title>
+    <link rel="stylesheet" href="./css/product.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/Gorriao.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="top-bar">
+            <div class="cajalogo">
+                <img src="/img/logo.jpg" class="logoprincipal" alt="4041">
+            </div>
+
+            <div class="searchbar">
+                <span class="search-bar"> <input type="text" placeholder="Buscar productos..."><button
+                        type="button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg></button> </span>
+            </div>
+
+            <div class="user-cart">
+                <a href="#">
+                    <i class="fa-solid fa-user fa-custom"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping fa-custom"></i>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Mayoristas</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="/register">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-main">
+            <div class="container-imgs">
+                <div class="container-principal">
+                    <img src="img/Gorra1.jpg" alt="404">
+                </div>
+
+                <div class="container-secondary">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                </div>
+
+            </div>
+
+            <div class="container-info">
+                <h2>Gorra Negra</h2>
+                <h4>&nbsp; &nbsp; $900,00</h4>
+
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt ad error, ipsam officia illo
+                    rerum voluptates expedita incidunt sapiente velit obcaecati eos explicabo facere dicta. Fugit
+                    adipisci rerum harum?</h3>
+
+                <div class="selector-color">
+                    <h3>Color: </h3>
+                    <input type="radio" id="color-azul" name="color" value="azul" placeholder="">
+
+                    <input type="radio" id="color-rojo" name="color" value="rojo" placeholder="">
+
+                    <input type="radio" id="color-violeta" name="color" value="violeta" placeholder="">
+                </div>
+
+                <div class="buttons-zone">
+                    <div class="counter-quantity">
+                        <button type="button"> - </button>
+                        <input type="text" disabled placeholder="0">
+                        <button type="button"> + </button>
+                    </div>
+
+                    <div class="button-add-cart">
+                        <button> Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="favorite-zone">
+                    <input type="checkbox" id="add-favorite">
+                    <label for="add-favorite"><span>&#9829</span> Agregar a la lista de deseos</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <h2>Productos Relacionados</h2>
+            <div class="carousel-slider">
+                <div class="carousel">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                    <img src="img/gorramorada.jpg" alt="404">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-footer-all">
+            <div class="container-body">
+                <div class="column-mobile">
+                    <div class="column-1">
+                        <h3>Redes Sociales</h3>
+                        <div class="redes-sociales">
+                            <a href="" target="_blank"> <i class="fa-brands fa-square-facebook"></i> <label> Síguenos en
+                                    Facebook</label> </a>
+                        </div>
+                        <div class="redes-sociales">
+                            <a href="" target="_blank"> <i class="fa-brands fa-instagram"></i> <label> Síguenos en
+                                    Instagram</label> </a>
+                        </div>
+                        <div class="redes-sociales">
+                            <a href="" target="_blank"> <i class="fa-brands fa fa-twitter-square"></i> <label> Síguenos
+                                    en Twitter</label> </a>
+                        </div>
+                    </div>
+
+                    <div class="column-2">
+                        <h3>Horarios de Atencion</h3>
+                        <div class="horario">
+                            <label> Lunes a Sabado</label>
+                            <label> 9:00 a 21:00 hs</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column-mobile">
+                    <div class="column-3">
+                        <h3>Medios de Pago</h3>
+                        <div class="medios_pago">
+                            <img src="" alt="mastercard" width="40" height="25">
+                            <img src="" alt="amex" width="40" height="25">
+                            <img src="" alt="diners" width="40" height="25">
+                            <img src="https://novedadescec.com.ar/wp-content/uploads/2019/06/banelco.png"
+                                alt="ar_banelco" width="40" height="25">
+                            <img src="https://mutualmedica.org.ar/wp-content/uploads/2020/01/tarjeta-naranja.png"
+                                alt="ar_tarjeta-naranja" width="40" height="25">
+                            <img src="" alt="mercadopago" width="40" height="25">
+                            <img src="" alt="cash" width="40" height="25">
+                        </div>
+                    </div>
+
+
+                    <div class="column-4">
+                        <h3>Contacto</h3>
+                        <div class="contacto">
+                            <a href="" target="_blank"> <i class="fa fa-phone-square"></i> <label>
+                                    +5493854567896</label> </a>
+                        </div>
+                        <div class="contacto">
+                            <a href="" target="_blank"> <i class="fa fa-envelope"></i> <label> Gorriao@gmail.com
+                                </label> </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-footer">
+                <div class="footer">
+                    <div class="copyright">
+                        © 2023 Todos los Derechos Reservados |
+                        <a href=""> Gorriao</a>
+                    </div>
+
+                    <div class="information">
+                        <a href=""> Términos y condiciones </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
