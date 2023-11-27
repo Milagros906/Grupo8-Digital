@@ -1,9 +1,10 @@
 const express = require ('express');
 const app = express();
-
 const path = require ('path');
-
 const publicPath = path.resolve(__dirname, '../public');
+
+//requerir archivos de rutas
+const mainRoutes = require ('./routes/mainRoutes.js')
 
 // Levantar el servidor
 app.listen(3030, ()=>{
@@ -14,25 +15,16 @@ app.listen(3030, ()=>{
 app.use(express.static(publicPath));
 
 //Indicando que usamos EJS
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
-// Creando nuestras rutas
-app.get("/", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/home.html"));
-})
+//consumiendo rutas
+app.use('/', mainRoutes);
 
-app.get('/register', function(req,res){
-    res.sendFile(path.join(__dirname,'/views/register.html'));
-})
+app.use('/register', mainRoutes);
 
-app.get("/carrito", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
-})
+app.use('/carrito', mainRoutes);
 
-app.get("/product", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/product.html"));
-})
+app.use('/product', mainRoutes);
 
-app.get("/login", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/login.html"));
-})
+app.use('login', mainRoutes);
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/lgstyles.css">
+</head>
+<%- include('parciales/head') %>
+
+<%- include('parciales/header') %>
+
+
+
+<body>
+    <section class="form-login">
+        <h2>Iniciar sesión en su cuenta</h2>
+        <label class="text">Dirección de correo:</label>
+        <input class="log" type="mail" name="dmail" id="dmail">
+        <label class="text">Contraseña:</label>
+        <input class="log" type="password" name="nombres" id="nombres">
+        <input class="sub" type="checkbox"><label class="text">Recordar mail y contraseña</label>
+        <p><a href="#">¿Olvidó su contraseña?</a></p>
+        <input class="boton" type="submit" value="Ingresar">
+        <p><a href="#">¿No tienes cuenta? Cree una aquí</a> </p>
+    </section>
+</body>
+<%- include('parciales/footer') %>
+</html>

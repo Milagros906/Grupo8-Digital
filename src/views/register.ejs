@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/estiloRegistro.css">
+</head>
+<%- include('parciales/head') %>
+
+<body>
+    <%- include('parciales/header') %>
+
+
+    <div class="container">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label class="campo" for="nombre">Nombre:</label>
+                <input class="campo-input" type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="apellido">Apellido:</label>
+                <input class="campo-input" type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="dni">DNI:</label>
+                <input class="campo-input" type="tel" id="dni" name="dni" pattern="[0-9]{8}" required>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="email">Correo electrónico:</label>
+                <input class="campo-input" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="password">Contraseña:</label>
+                <div class="input-container">
+                    <input class="campo-input password" type="password" id="password" name="password" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="repeatPassword">Repetir contraseña:</label>
+                <input class="campo-input password" type="password" id="repeatPassword" name="repeatPassword" required>
+            </div>
+            <div class="input-container">
+                <button class="eye-button" type="button" id="togglePassword">Mostrar/Ocultar</button>
+            </div>
+            <div class="form-group">
+                <label class="campo" for="subscribe">¿Desea suscribirse para recibir las últimas novedades y ofertas de
+                    nuestros productos a su correo?</label>
+                <input type="checkbox" id="subscribe" name="subscribe" style="vertical-align: middle;">
+            </div>
+            <button class="register" type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <script src="/app.js"></script>
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordInputs = document.querySelectorAll('.password');
+            passwordInputs.forEach(function (input) {
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+            });
+        });
+
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const password = document.getElementById('password').value;
+            const repeatPassword = document.getElementById('repeatPassword').value;
+
+            if (password !== repeatPassword) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+<%- include('parciales/footer') %>
+</html>
