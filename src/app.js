@@ -13,6 +13,9 @@ app.listen(3030, ()=>{
 // Donde están los recursos estáticos
 app.use(express.static(publicPath));
 
+//Indicando que usamos EJS
+app.set('view engine', 'ejs');
+
 // Creando nuestras rutas
 app.get("/", function (req, res) {
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
