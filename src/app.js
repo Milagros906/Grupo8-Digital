@@ -13,23 +13,27 @@ app.listen(3030, ()=>{
 // Donde están los recursos estáticos
 app.use(express.static(publicPath));
 
+//EJS
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 // Creando nuestras rutas
 app.get("/", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/home.html"));
-})
+    res.render('home');
+});
 
 app.get('/register', function(req,res){
-    res.sendFile(path.join(__dirname,'/views/register.html'));
+    res.render('register');
 })
 
 app.get("/carrito", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
+    res.render('carrito');
 })
 
 app.get("/product", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/product.html"));
+    res.render('product');
 })
 
 app.get("/login", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/login.html"));
+    res.render('login');
 })
