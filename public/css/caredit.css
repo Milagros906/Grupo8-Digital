@@ -1,0 +1,69 @@
+body{
+    background-color: #ECDBC6;
+}
+
+.box{
+    background-color: white;
+    width: 50%;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 15vh;
+    border-radius: 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-decoration: underline;
+}
+
+.ent{
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+li{
+    margin-left: auto;
+}
+
+hr{
+    width: 70%;
+    height: 2px;
+    background-color: gray;
+    border-color: gray;
+}
+
+.date{
+    margin-left: 40px;
+}
+
+.num{
+    width: 20%;
+    margin-left: 40px;
+}
+
+.fin{
+    margin-top: 40px;
+    display: flex;
+    margin-left: 60%;
+    align-items: center;
+}
+
+.price{
+    height: 80%;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 30%;
+}
+
+.sub{
+    background-color: #ECDBC6;
+    border-color: gray;
+    border-radius: 10px;
+}

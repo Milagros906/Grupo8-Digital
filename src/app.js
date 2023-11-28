@@ -33,3 +33,7 @@ app.get("/product", function (req, res) {
 app.get("/login", function (req, res) {
     res.sendFile(path.resolve(__dirname, "./views/login.html"));
 })
+
+app.get("/caredit", function (req, res) {
+    res.sendFile(path.resolve(__dirname, "/views/caredit.html"));
+})
