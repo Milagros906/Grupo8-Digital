@@ -7,10 +7,6 @@ const mainControllers = require('../controllers/mainControllers');
 
 //Armando rutas
 routes.get('/', mainControllers.index);
-routes.get('/register', mainControllers.register);
-routes.get('/carrito', mainControllers.carrito);
-routes.get('/product', mainControllers.product);
-routes.get('/login', mainControllers.login);
 
 
 module.exports = routes;

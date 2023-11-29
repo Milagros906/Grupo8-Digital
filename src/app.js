@@ -5,6 +5,8 @@ const publicPath = path.resolve(__dirname, '../public');
 
 //requerir archivos de rutas
 const mainRoutes = require ('./routes/mainRoutes.js')
+const userRoutes = require ('./routes/userRoutes.js')
+const productRoutes = require ('./routes/productRoutes.js')
 
 // Levantar el servidor
 app.listen(3030, ()=>{
@@ -20,11 +22,21 @@ app.set('view engine', 'ejs');
 //consumiendo rutas
 app.use('/', mainRoutes);
 
-app.use('/register', mainRoutes);
+//USER ROUTES
 
-app.use('/carrito', mainRoutes);
+app.use('/', userRoutes)
+//app.use('/register', userRoutes);
 
-app.use('/product', mainRoutes);
+//app.use('/login', userRoutes);
 
-app.use('login', mainRoutes);
+//PRODUCT ROUTES
 
+app.use('/', productRoutes)
+
+//app.use('/carrito', productRoutes);
+
+//app.use('/product', productRoutes);
+
+//app.use('/caredit', productRoutes);
+
+//app.use('/caredit2', productRoutes);

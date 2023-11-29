@@ -1,15 +1,16 @@
-/*===========HEADER AND BANNER===========*/
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
 body {
     background-color: #ebebeb;
     padding-top: 4rem;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*=====Header====*/
 .login {
     color: black;
     text-decoration: none
@@ -185,64 +186,71 @@ header {
     padding: 25px;
 }
 
-.box a {
-    text-align: center;
-    text-decoration: none;
-    color:#000000 ;
-    padding-right: 5px;
-    padding-left: 5px;
-    font-size: 14px;
-}
+/*=====Formulario=========*/
+.formingreso {
+    width: 400px;
+    background: #ffffff;
+    padding: 30px;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    font-family: 'calibri';
+    }
 
-.left {
-    border-left: 1px solid #666;
-}
+    .formingreso h2{
+        font-size: 25px;
+        margin-bottom: 5px;
+        text-align: center;
+        height: 70px;
+    }
 
-.categorias {
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    width: 100%;
-    background-color:#e5bf91;
-    margin-top: -1vb;
-}
+    .categorias {
+        list-style: none;
+    }
 
-main {
-    padding: 25px;
-}
+    .categorias li {
+            display: inline;
+            margin: 0 15px;
+    }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 25px;
-}
+    p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px; 
+    }
 
-.cajaproductos {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
+    .formu {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 5px; 
+    }
 
-article {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
+    .texto{
+        text-align: center;
+        align-items: center;
+        height: 30px; 
+        width: 350px; 
+        border-radius: 8px; 
+        padding: 5px; 
+    }
 
-.producto {
-    justify-content: center;
-    margin: 1% 1%;
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(183, 192, 167);
-}
+    .botonespie {
+        display: flex; 
+        justify-content: center; 
+        margin-top: 10px; 
+    }
 
-.producto img {
-    width: 100%;
-}
+    .botonespie button,
+    .botonespie input {
+        margin: 0 10px; 
+    }
 
+    
 
-/*============FOOTER====================*/
+    /*============FOOTER====================*/
 footer {
     width: 100%;
     background: #cccccc;
@@ -353,9 +361,10 @@ footer {
     color: #ffffff;
 }
 
+
 @media (min-width: 761px) {
     .cajalogo {
-       width: 15%;
+    width: 15%;
     }
 
     .searchbar{
@@ -368,26 +377,13 @@ footer {
     
     .navbar ul {
         margin-top: -40px;
-    } 
-
-    .banner-1 {
-        margin-top: -3vb;
-    }
-
-    .producto {
-        width: 25%;
-    }
-
-    .cajaproductos {
-        flex-direction: row;
-    }
-
+    }  
     body {
         background-color: #ebebeb;
-        padding-top: 8rem;
+        padding-top: 4rem;
     }
 
-    .container-body {
+    .container-body{
         flex-direction: row;
     }
 
@@ -395,5 +391,5 @@ footer {
         padding-right: 50px;
         padding-left: 50px;
         width: 50%;  
-    }
 }
+ }
