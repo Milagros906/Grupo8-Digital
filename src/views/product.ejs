@@ -5,119 +5,47 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/product.css">
+    <title>Gorriao - Producto</title>
+    <%- include('parciales/head') %>
 </head>
-<%- include('parciales/head') %>
 
 <body>
 
     <%- include('parciales/header') %>
 
     <main>
-        <div class="container-main">
-            <div class="container-imgs">
-                <div class="container-principal">
-                    <img src="img/Gorra1.jpg" alt="404">
-                </div>
-
-                <div class="container-secondary">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                </div>
-
-            </div>
-
-            <div class="container-info">
-                <h2>Gorra Negra</h2>
-                <h4>&nbsp; &nbsp; $900,00</h4>
-
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt ad error, ipsam officia illo
-                    rerum voluptates expedita incidunt sapiente velit obcaecati eos explicabo facere dicta. Fugit
-                    adipisci rerum harum?</h3>
-
-                <div class="selector-color">
-                    <h3>Color: </h3>
-                    <input type="radio" id="color-azul" name="color" value="azul" placeholder="">
-
-                    <input type="radio" id="color-rojo" name="color" value="rojo" placeholder="">
-
-                    <input type="radio" id="color-violeta" name="color" value="violeta" placeholder="">
-                </div>
-
-                <div class="buttons-zone">
-                    <div class="counter-quantity">
-                        <button type="button"> - </button>
-                        <input type="text" disabled placeholder="0">
-                        <button type="button"> + </button>
-                    </div>
-
-                    <div class="button-add-cart">
-                        <button> Añadir al carrito</button>
-                    </div>
-                </div>
-
-                <div class="favorite-zone">
-                    <input type="checkbox" id="add-favorite">
-                    <label for="add-favorite"><span>&#9829</span> Agregar a la lista de deseos</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-container">
-            <h2>Productos Relacionados</h2>
-            <div class="carousel-slider">
-                <div class="carousel">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                    <img src="img/gorramorada.jpg" alt="404">
-                </div>
-            </div>
-        </div>
-
-
         <!--Listado de Productos-->
         <br>
         <section class="row">
-          <article class="col-12 ">
-            <h2 class="display-5  text-center pt-2">Productos</h2>
-          </article>
-          <article class="col-12">
-            <a href="/caredit"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
-          </article>
-          <article class="col-12" >
-          <table class=" table ">
-              <thead>
-                <tr>  
-                  <th scope="col">Id</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Ver</th>
-                  <th scope="col">Editar</th>
-                  <th scope="col">Borrar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <% productosL.forEach(producto => { %>
-                <tr>
-                  <td><%= producto.id%> </td>
-                  <td><%= producto.nombreproducto%> </td>
-                  <td><a href="/products/prodDetail/<%= producto.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                  <td><a href=""> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                  <td><a href=""><ion-icon name="trash-outline"></ion-icon></a></td>
-                </tr>
-                <% }); %>
-              </tbody>
-            </table> 
-          </article>       
+            <article class="col-12">
+                <a href="/caredit" class="add-link"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
+            </article>
+            <article class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Ver</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% productosL.forEach(producto => { %>
+                        <tr>
+                            <td><%= producto.id%> </td>
+                            <td><%= producto.nombreproducto%> </td>
+                            <td><a href="/products/prodDetail/<%= producto.id%> "><ion-icon name="eye-outline"></ion-icon></a></td>
+                            <td><a href=""><ion-icon name="pencil-outline"></ion-icon></a></td>
+                            <td><a href=""><ion-icon name="trash-outline"></ion-icon></a></td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </article>
         </section>
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-        
-    </main>
-
     <%- include('parciales/footer') %>
 </body>
 

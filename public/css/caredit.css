@@ -1,16 +1,16 @@
 
-body {
-    background-color: #ebebeb;
-    padding-top: 4rem;
-}
-
+/*===========HEADER AND BANNER===========*/
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-/*=====Header====*/
+body {
+    background-color: #ebebeb;
+    margin-top: -3rem;
+}
+
 .login {
     color: black;
     text-decoration: none
@@ -34,6 +34,8 @@ body {
     width: 20%;
     text-align: center;
 }
+
+
 
 .login a {
     color: black;
@@ -144,6 +146,7 @@ header {
 
 .navbar {
     text-align: center;
+    text-decoration: none;
 }
 
 .navbar ul {
@@ -162,95 +165,214 @@ header {
     color:#000000;
 }
 
-.banner {
-    text-align: center;
-    margin-bottom: -1vb;
-}
 
-.banner-1 {
-    text-align: center;
-    margin-top:11vh;
-}
 
-.bannerdestacado {
-    max-width: 100%;
-    height: auto;
-}
-
-.box {
-    max-width: 1000px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+/*=================MAIN=================*/
+.container-main{
     display: flex;
-    justify-content: center;
-    padding: 25px;
-}
-
-/*=====Formulario=========*/
-.formingreso {
-    width: 400px;
-    background: #ffffff;
-    padding: 30px;
+    flex-direction: column;
+    width: 90vw;
     margin: auto;
     margin-top: 15vh;
     margin-bottom: 50px;
-    border-radius: 25px;
-    font-family: 'calibri';
-    }
+}
 
-    .formingreso h2{
-        font-size: 25px;
-        margin-bottom: 5px;
-        text-align: center;
-        height: 70px;
-    }
+    /* Imagen Principal */
+.container-principal img {
+    border: 1px solid black;
+    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+}
 
-    .categorias {
-        list-style: none;
-    }
+    /* Imagenes Secundarias */
+.container-secondary{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10px;
+}
 
-    .categorias li {
-            display: inline;
-            margin: 0 15px;
-    }
+.container-secondary img{
+    width: 30%;
+    height: 15vb;
+    border-radius: 15px;
+}
 
-    p {
+    /* Container Con la Informacion */
+.container-info {
+    padding: 20px 20px 20px 10px;
+    background-color: white;
+    border-radius: 18px;
+    margin-top: 10px;
+}
+
+.container-info h4 {
+    margin-top: 10px;
+}
+
+.container-info h3 { 
+    margin-top: 30px;
+}
+
+    /* Seleccion de Colores */
+.selector-color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.selector-color h3 {
+    margin-top: 0;
+}
+
+.selector-color input[type='radio']{
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    appearance: none; /* A los input de tipo radio button les puse appareance none para poder modificarlo con los atributos comunes */
+    border: 0px;
+    border-radius: 50%;
+}
+
+#color-azul {
+    background-color: blue;
+}
+
+#color-rojo {
+    background-color: red;
+}
+
+#color-violeta {
+    background-color: purple;
+}
+
+#color-azul:checked, #color-rojo:checked, #color-violeta:checked {
+    border: 3px solid black;
+}
+
+    /* Zona de Botones */
+.buttons-zone {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+    .counter-quantity {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10px; 
+        flex-direction: row;
+        width: 40%;
     }
 
-    .formu {
+    .counter-quantity button {
+        padding: 7px 10%;
+        background-color: #666;
+        color: white;
+        border: 1px solid #666;
+    }
+
+    .counter-quantity button:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .counter-quantity button:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .counter-quantity input {
+        width: inherit;
         text-align: center;
+    }
+
+    .button-add-cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 10%;
+    }
+
+    .button-add-cart button {
+        width: 100%;
         font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 5px; 
+        color: white;
+        background-color: #666;
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 5px 14px;
+        margin: auto;
     }
 
-    .texto{
-        text-align: center;
-        align-items: center;
-        height: 30px; 
-        width: 350px; 
-        border-radius: 8px; 
-        padding: 5px; 
+    /* Zona de Agregar a favorito */
+.favorite-zone {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.favorite-zone input {
+    display: none;
+}
+
+/* El operador ~ asigna el CSS solo cuando el elemento del lado izquierdo exista  */
+#add-favorite:checked ~ label span {
+    color: red;
+}
+
+.favorite-zone label span {
+    font-size: 2rem;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: #e5bf91;
+}
+
+.carousel-container h2 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.carousel-slider {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Añade soporte de desplazamiento suave en iOS */
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 7.5s linear infinite;
+}
+
+.carousel img {
+    flex: 0 0 auto;
+    width: 40%;
+    height: 25vh;
+    scroll-snap-align: start;
+    border-radius: 30px;
+    padding: 20px; /* Espaciado interno para los elementos del carrusel */
+}
+
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
-
-    .botonespie {
-        display: flex; 
-        justify-content: center; 
-        margin-top: 10px; 
+    100% {
+        transform: translateX(-50%);
     }
-
-    .botonespie button,
-    .botonespie input {
-        margin: 0 10px; 
-    }
-
-    
-
-    /*============FOOTER====================*/
+}
+/*============FOOTER====================*/
 footer {
     width: 100%;
     background: #cccccc;
@@ -364,7 +486,7 @@ footer {
 
 @media (min-width: 761px) {
     .cajalogo {
-    width: 15%;
+       width: 15%;
     }
 
     .searchbar{
@@ -374,13 +496,38 @@ footer {
     .user-cart{
         width: 10%;
     }
-    
+
     .navbar ul {
         margin-top: -40px;
-    }  
+    }
+
+    .container-main {
+        margin-top: 5vh;
+        flex-direction: row;
+    }
+    
+    .container-imgs{
+        width: fit-content;
+    }
+    
+    .container-secondary img{
+        height: 25vb;
+    }
+
+    .container-info {
+        margin-top: 0px;
+        width: fit-content;
+        margin-left: 20px;
+        height: fit-content;
+    }
+    .carousel img  {
+        width: 25%;
+        height: 35vh; 
+    }
+
     body {
         background-color: #ebebeb;
-        padding-top: 4rem;
+        margin-top: 8rem;
     }
 
     .container-body{
@@ -391,5 +538,6 @@ footer {
         padding-right: 50px;
         padding-left: 50px;
         width: 50%;  
+    }
 }
- }
+

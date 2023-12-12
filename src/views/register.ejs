@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/estiloRegistro.css">
+    <title>Gorriao - Registro</title>
+    <%- include('parciales/head') %>
 </head>
-<%- include('parciales/head') %>
 
 <body>
     <%- include('parciales/header') %>
-
 
     <div class="container">
         <form action="#" method="post">
@@ -50,6 +50,8 @@
             <button class="register" type="submit">Registrarse</button>
         </form>
     </div>
+      
+    <%- include('parciales/footer') %>
 
     <script src="/app.js"></script>
     <script>
@@ -71,6 +73,4 @@
         });
     </script>
 </body>
-
-<%- include('parciales/footer') %>
 </html>
