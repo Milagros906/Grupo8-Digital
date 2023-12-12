@@ -23,3 +23,6 @@
  + GOGO:https://www.gogoargentina.com.ar/
  + MARIA RIVOLTA:https://www.mariarivolta.com/
  + SUGAR BRUSH: https://sugarbrush.com.ar/
+
+ **Link de Trello**
+ + https://trello.com/b/r14YsO6a/proyecto-gorriao 

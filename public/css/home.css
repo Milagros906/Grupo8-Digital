@@ -7,7 +7,7 @@
 
 body {
     background-color: #ebebeb;
-    padding-top: 4rem;
+    margin-top: -1rem;
 }
 
 .login {
@@ -384,7 +384,7 @@ footer {
 
     body {
         background-color: #ebebeb;
-        padding-top: 8rem;
+        margin-top: 10rem;
     }
 
     .container-body {
