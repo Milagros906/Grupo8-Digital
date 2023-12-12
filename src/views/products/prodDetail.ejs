@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../.././css/caredit.css"> 
+    <title>Nuevo producto</title>
+    <%- include('../parciales/head') %>
+</head>
+
+  <body>
+    <%- include('../parciales/header') %>
+
+
+    <main class="container-fluid">
+      <!--Producto-->
+      <br><br>
+      <section class="row">
+            <article class="col-12 col-md-6 mx-auto mt-5 producto">
+                <div class="card-body">
+                  <img  src="/images/productos/<%= miProducto.avatar%>">
+                  <h5 class="card-title"><%= miProducto.nombreproducto %></h5>
+                  <h5 class="card-title"><%= miProducto.marca %></h5>
+                  <h5 class="card-title">$ <%= miProducto.precio %></h5>
+                  <p class="card-text"><%= miProducto.descripcion %></p>
+                  
+                </div>
+                <a href="/product" class="btn btn-danger">Volver</a>
+            </article>
+      </section>
+    </main>
+
+  <%- include('../parciales/footer') %>  
+  </body>
+</html>

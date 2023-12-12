@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "nombreproducto": "Gorra UwU",
+    "marca": "Anime",
+    "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    "precio": "15.000",
+    "tipoDeProducto": "gorra",
+    "avatar": "uwu-happy-anime-emoticon-de-cara-gorra-beisbol.jpg"
+  },
+  {
+    "id": 2,
+    "nombreproducto": "Gorra Fairy Tail",
+    "marca": "Anime",
+    "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    "precio": "20.000",
+    "tipoDeProducto": "gorra",
+    "avatar": "il_570xN.2482378601_2dc2.jpg"
+  },
+  {
+    "id": 3,
+    "nombreproducto": "Collar místico",
+    "marca": "Newstone",
+    "descripcion": "Brilla en la oscuridad",
+    "precio": "19000",
+    "tipoDeProducto": "colgante",
+    "avatar": "1702336549834_img.jpg"
+  }
+]
