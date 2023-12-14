@@ -167,7 +167,7 @@ header {
 
 
 
-/*=================MAIN=================*/
+/*=================Form Agregar=================*/
 .form-container {
     width: 400px;
     background: #ffffff;
@@ -231,6 +231,211 @@ header {
 .btn-danger {
     background-color: #e5bf91;
     color: #ffffff;
+}
+/*=================ProductoDetalle=================*/
+.container-main{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 50px;
+}
+
+    /* Imagen Principal */
+.container-principal img {
+    border: 1px solid black;
+    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+    /* Imagenes Secundarias */
+.container-secondary{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.container-secondary img{
+    width: 30%;
+    height: 15vb;
+    border-radius: 15px;
+}
+
+    /* Container Con la Informacion */
+.container-info {
+    padding: 20px 20px 20px 10px;
+    background-color: white;
+    border-radius: 18px;
+    margin-top: 10px;
+}
+
+.container-info h4 {
+    margin-top: 10px;
+}
+
+.container-info h3 { 
+    margin-top: 30px;
+}
+
+    /* Seleccion de Colores */
+.selector-color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.selector-color h3 {
+    margin-top: 0;
+}
+
+.selector-color input[type='radio']{
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    appearance: none; /* A los input de tipo radio button les puse appareance none para poder modificarlo con los atributos comunes */
+    border: 0px;
+    border-radius: 50%;
+}
+
+#color-azul {
+    background-color: blue;
+}
+
+#color-rojo {
+    background-color: red;
+}
+
+#color-violeta {
+    background-color: purple;
+}
+
+#color-azul:checked, #color-rojo:checked, #color-violeta:checked {
+    border: 3px solid black;
+}
+
+    /* Zona de Botones */
+.buttons-zone {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+    .counter-quantity {
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+    }
+
+    .counter-quantity button {
+        padding: 7px 10%;
+        background-color: #666;
+        color: white;
+        border: 1px solid #666;
+    }
+
+    .counter-quantity button:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .counter-quantity button:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .counter-quantity input {
+        width: inherit;
+        text-align: center;
+    }
+
+    .button-add-cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 10%;
+    }
+
+    .button-add-cart button {
+        width: 100%;
+        font-size: 22px;
+        color: white;
+        background-color: #666;
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 5px 14px;
+        margin: auto;
+    }
+
+    /* Zona de Agregar a favorito */
+.favorite-zone {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.favorite-zone input {
+    display: none;
+}
+
+/* El operador ~ asigna el CSS solo cuando el elemento del lado izquierdo exista  */
+#add-favorite:checked ~ label span {
+    color: red;
+}
+
+.favorite-zone label span {
+    font-size: 2rem;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: #e5bf91;
+}
+
+.carousel-container h2 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.carousel-slider {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Añade soporte de desplazamiento suave en iOS */
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 7.5s linear infinite;
+}
+
+.carousel img {
+    flex: 0 0 auto;
+    width: 40%;
+    height: 25vh;
+    scroll-snap-align: start;
+    border-radius: 30px;
+    padding: 20px; /* Espaciado interno para los elementos del carrusel */
+}
+
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 /*============FOOTER====================*/
 footer {
