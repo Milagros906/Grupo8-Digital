@@ -11,79 +11,54 @@
 
 <%- include('parciales/header') %>
 <body>
-
     <main class="container-fluid"> 
-          <section class="row">
-            <article class="col-12  card " >
-                    <div class="card-body">
-                      <h2 class="display-4 text-white bg-info text-center pt-2">Agregar un producto a la tienda</h2>
+        <div class="caredit-form">
+            <div class="formingreso">
+                <form action="/caredit" method="POST" enctype="multipart/form-data">
+                    <div class="form-container">
+    
+                        <label for="nombreproducto" class="formu">Nombre del producto</label>
+                        <input type="text" name="nombreproducto" id="nombreproducto" class="texto" required="required" placeholder="Ingrese el nombre del producto">
+    
+                        <label for="marca" class="formu">Marca</label>
+                        <input type="text" name="marca" id="marca" class="texto" required="required" placeholder="Ingrese la marca del producto">
+    
+                        <label for="descripcion" class="formu">Descripción</label>
+                        <input type="text" name="descripcion" id="descripcion" class="texto" required="required" placeholder="Ingrese la descripción del producto">
+    
+                        <label for="precio" class="formu">Precio</label>
+                        <input type="number" name="precio" id="precio" class="texto" required="required" placeholder="Ingrese el precio del producto">
+    
+                        <label class="formu">Tipo de producto</label>
+                        <ul class="categorias">
+                            <li>Gorra: <input type="radio" name="tipoDeProducto" value="gorra" checked></li>
+                            <li>Aritos: <input type="radio" name="tipoDeProducto" value="arito"></li>
+                            <li>Cinturon: <input type="radio" name="tipoDeProducto" value="cinturon"></li>
+                            <li>Colgante: <input type="radio" name="tipoDeProducto" value="colgante"></li>
+                            <li>Cartera: <input type="radio" name="tipoDeProducto" value="artera"></li>
+                        </ul>
+                        
+                        <label class="formu">Selecciona una foto para tu producto</label>
+                        <input type="file" name="avatar" id="avatar" accept="image/*">
+    
+                        <div class="botonespie">
+                            <div class="form-group">
+                                <p>
+                                    <button type="submit" class="btn btn btn-info">Enviar</button>
+                                </p>
+                            </div>
+    
+                            <p>
+                                <button class="btn btn-info" type="reset">Reiniciar</button>
+                            </p>
+                        </div>
+                        <br>
+                        <a href="/product" class="btn btn-danger">Volver</a>
+    
                     </div>
-            </article>
-          </section>
-
-
-    <div class="caredit-form">
-    <div class="formingreso">
-
-        <form action="/caredit" method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-            <!--<h2>Agregar un producto a la tienda</h2>-->
-
-            <p>
-                <label for="nombreproducto" class="formu">Nombre del producto</label>
-                <input type="text" name="nombreproducto" id="nombreproducto" class="texto" required="required" value="">
-            </p>
-
-            <p>
-                <label for="marca" class="formu">Marca</label>
-                <input type="text" name="marca" id="marca" class="texto" required="required" value="">
-            </p>
-
-            <p>
-                <label for="descripcion" class="formu">Descripción</label>
-                <input type="text" name="descripcion" id="descripcion" class="texto" required="required" value="">
-            </p>
-
-            <p>
-                <label for="precio" class="formu">Precio</label>
-                <input type="number" name="precio" id="precio" class="texto" required="required" value="">
-            </p>
-
-            <p>
-                <label class="formu">Tipo de producto</label>
-            <ul class="categorias">
-                <li>Gorra: <input type="radio" name="tipoDeProducto" value="gorra" checked></li>
-                <li>Aritos: <input type="radio" name="tipoDeProducto" value="arito"></li>
-                <li>Cinturon: <input type="radio" name="tipoDeProducto" value="cinturon"></li>
-                <li>Colgante: <input type="radio" name="tipoDeProducto" value="colgante"></li>
-                <li>Cartera: <input type="radio" name="tipoDeProducto" value="artera"></li>
-            </ul>
-            </p>
-
-            <p>
-                <label class="formu">Selecciona una foto para tu producto</label>
-                <input type="file" name="avatar" id="avatar">
-            </p>
-
-            <div class="botonespie">
-                <div class="form-group">
-                <p>
-                    <button type="submit" class="btn btn btn-info">Enviar</button>
-                    <!--<input type="submit" class="btn btn btn-info" value="Enviar"></input>-->
-                </p>
-                
-                </div>
-
-                <p>
-                    <button type="reset">Reiniciar</button>
-                </p>
+                </form>
             </div>
-            <a href="/product" class="btn btn-danger">Volver</a>
-
         </div>
-        </form>
-    </div>
-    </div>
     </main>
 </body>
 
