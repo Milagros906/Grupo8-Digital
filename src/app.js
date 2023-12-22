@@ -2,6 +2,15 @@ const express = require ('express');
 const app = express();
 const path = require ('path');
 const publicPath = path.resolve(__dirname, '../public');
+const methodOverride = require('method-override');
+
+//Esto nos permite poder enviar datos desde el POST por el método PUT o DELETE
+app.use(methodOverride('_method'));
+
+//URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
+//=================================================
+app.use(express.urlencoded({ extended: false }));
+//=================================================
 
 //requerir archivos de rutas
 const mainRoutes = require ('./routes/mainRoutes.js')

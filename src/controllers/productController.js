@@ -2,15 +2,15 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = {
-    
+
     carrito: (req, res) => {
         res.render(path.resolve(__dirname, '../views/carrito.ejs'))
     },
-    
+
     product: (req, res) => {
         //res.render(path.resolve(__dirname, '../views/product.ejs'))
         let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
-        res.render(path.resolve(__dirname, '../views/product'), {productosL});
+        res.render(path.resolve(__dirname, '../views/product'), { productosL });
     },
 
     caredit: (req, res) => {
@@ -23,7 +23,7 @@ module.exports = {
     //create: (req,res) => {
     //    res.render(path.resolve(__dirname, '../views/caredit.ejs'));
     //},
-    save: (req,res) => {
+    save: (req, res) => {
         //Recibir datos del Front-end al Backend: Formulario (req.body)
         //Query strings: req.query
         //Cuando vienen de una etiqueta <a> Ancla req.params
@@ -44,21 +44,52 @@ module.exports = {
         //Agregamos nuestro nuevo producto al array
         productosL.push(nuevoProducto);
         //Convertir nuestro array a un archivo en formato json
-        let nuevoProductoGuardar = JSON.stringify(productosL,null,2)
+        let nuevoProductoGuardar = JSON.stringify(productosL, null, 2)
         //Guardar nuestro archivo
-        fs.writeFileSync(path.resolve(__dirname,'../database/productos.json'),nuevoProductoGuardar);
+        fs.writeFileSync(path.resolve(__dirname, '../database/productos.json'), nuevoProductoGuardar);
         res.redirect('/product')
     },
-    show: (req,res) => {
-        //console.log(req.params);
+    show: (req, res) => {
         let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
         let id = req.params.id;
         let miProducto;
         productosL.forEach(producto => {
-            if(producto.id == id){
+            if (producto.id == id) {
                 miProducto = producto;
             }
         });
-        res.render(path.resolve(__dirname, '../views/products/prodDetail.ejs'),{miProducto})
+        res.render(path.resolve(__dirname, '../views/products/prodDetail.ejs'), { miProducto })
+    },
+    edit: (req, res) => {
+        let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+        let id = req.params.id;
+        let productoEditar = productosL.find(producto => {
+            return producto.id == id
+        });
+        res.render(path.resolve(__dirname, '../views/products/prodEdit.ejs'), { productoEditar });
+    },
+    update: (req, res) => {
+        console.log(req.body);
+        let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+        let id = req.params.id;
+        req.body.id = id;
+        req.body.id = parseInt(req.body.id);
+        let productosActualizar = productosL.map(producto => {
+            if (producto.id == id) {
+                return req.body;
+            }
+            return producto;
+        });
+        let productoYaActualizado = JSON.stringify(productosActualizar, null, 2);
+        fs.writeFileSync(path.resolve(__dirname, '../database/productos.json'), productoYaActualizado);
+        res.redirect('/product')
+    },
+    destroy: (req, res) => {
+        let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+        let id = req.params.id;
+        let productosFinal = productosL.filter(producto => producto.id != id)
+        let productoGuardarFinal = JSON.stringify(productosFinal, null, 2);
+        fs.writeFileSync(path.resolve(__dirname, '../database/productos.json'), productoGuardarFinal);
+        res.redirect('/product')
     }
 }
