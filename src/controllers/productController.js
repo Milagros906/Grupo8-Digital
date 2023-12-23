@@ -1,5 +1,8 @@
 const path = require('path');
 const fs = require('fs');
+const multer = require('multer');
+const upload = multer({ dest: 'public/images/productos' });
+
 
 module.exports = {
 
@@ -68,22 +71,33 @@ module.exports = {
         });
         res.render(path.resolve(__dirname, '../views/products/prodEdit.ejs'), { productoEditar });
     },
-    update: (req, res) => {
-        console.log(req.body);
-        let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
-        let id = req.params.id;
-        req.body.id = id;
-        req.body.id = parseInt(req.body.id);
-        let productosActualizar = productosL.map(producto => {
+    update: [
+        upload.single('avatar'), // Cambiado de 'image' a 'avatar'
+        (req, res) => {
+          console.log(req.body);
+          let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+          let id = req.params.id;
+          req.body.id = id;
+          req.body.id = parseInt(req.body.id);
+      
+          // Verificar si se cargó un archivo
+          if (req.file) {
+            req.body.image = '/images/productos/' + req.file.filename;
+          }
+      
+          let productosActualizar = productosL.map(producto => {
             if (producto.id == id) {
-                return req.body;
+              return req.body;
             }
             return producto;
-        });
-        let productoYaActualizado = JSON.stringify(productosActualizar, null, 2);
-        fs.writeFileSync(path.resolve(__dirname, '../database/productos.json'), productoYaActualizado);
-        res.redirect('/product')
-    },
+          });
+      
+          let productoYaActualizado = JSON.stringify(productosActualizar, null, 2);
+          fs.writeFileSync(path.resolve(__dirname, '../database/productos.json'), productoYaActualizado);
+      
+          res.redirect('/product');
+        },
+      ],
     destroy: (req, res) => {
         let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
         let id = req.params.id;
@@ -93,3 +107,4 @@ module.exports = {
         res.redirect('/product')
     }
 }
+
