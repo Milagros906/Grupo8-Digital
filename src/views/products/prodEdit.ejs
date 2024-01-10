@@ -14,7 +14,7 @@
             <div class="caredit-form">
                 <div class="formingreso">
                     <form action="/products/prodEdit/<%= productoEditar.id%>?_method=PUT
-                        " method="POST" >
+                        " method="POST" enctype="multipart/form-data">
                         <div class="form-container">
                             
                             <input type="hidden" name="id" value="<%= productoEditar.id %>">
@@ -47,13 +47,13 @@
                                         <%= productoEditar.tipoDeProducto == "cinturon" ? 'checked' : '' %>></li>
                                 <li>Colgante: <input type="radio" name="tipoDeProducto" value="colgante"
                                         <%= productoEditar.tipoDeProducto == "colgante" ? 'checked' : '' %>></li>
-                                <li>Cartera: <input type="radio" name="tipoDeProducto" value="artera"
+                                <li>Cartera: <input type="radio" name="tipoDeProducto" value="cartera"
                                         <%= productoEditar.tipoDeProducto == "cartera" ? 'checked' : '' %>></li>
                             </ul>
 
 
                             <label class="formu">Imagen del producto</label>
-                            <input type="file" name="avatar" id="avatar" accept="image/*" value="<%= productoEditar.avatar%>">
+                            <input type="file" name="avatar" id="avatar" accept="image/*">
 
 
                             <div class="botonespie">

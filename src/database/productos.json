@@ -29,10 +29,19 @@
   {
     "id": 4,
     "nombreproducto": "Metabee",
-    "marca": "Medarot",
-    "descripcion": "Está epico",
-    "precio": "29.000",
+    "marca": "Medarot 2",
+    "descripcion": "Está épico y es fuerte, de acero puro",
+    "precio": "37000",
     "tipoDeProducto": "colgante",
-    "avatar": ""
+    "avatar": "1704914083499_img.jpg"
+  },
+  {
+    "id": 5,
+    "nombreproducto": "Robot",
+    "marca": "Meda",
+    "descripcion": "Cool",
+    "precio": "24000",
+    "tipoDeProducto": "cinturon",
+    "avatar": "1704912382665_img.jpg"
   }
 ]

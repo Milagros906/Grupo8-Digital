@@ -26,6 +26,7 @@
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Imagen</th>
                             <th scope="col">Ver</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Borrar</th>
@@ -36,6 +37,7 @@
                         <tr>
                             <td><%= producto.id%> </td>
                             <td><%= producto.nombreproducto%> </td>
+                            <td><img src="/images/productos/<%= producto.avatar%>" alt="<%= producto.nombreproducto %>"></td>
                             <td><a href="/products/prodDetail/<%= producto.id%> "><ion-icon name="eye-outline"></ion-icon></a></td>
                             <td><a href="/products/prodEdit/<%= producto.id%> "><ion-icon name="pencil-outline"></ion-icon></a></td>
                             <td><a href="/products/prodDelete/<%= producto.id%> "><ion-icon name="trash-outline"></ion-icon></a></td>

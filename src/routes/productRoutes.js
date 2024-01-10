@@ -27,7 +27,7 @@ productRoutes.get('/caredit2', productController.caredit2);
 productRoutes.post('/caredit', upload.single('avatar'), productController.save);
 productRoutes.get('/products/prodDetail/:id', productController.show);
 productRoutes.get('/products/prodEdit/:id', productController.edit);
-productRoutes.put('/products/prodEdit/:id', productController.update);
+productRoutes.put('/products/prodEdit/:id', upload.single('avatar'), productController.update);
 productRoutes.get('/products/prodDelete/:id', productController.destroy);
 
 module.exports = productRoutes;

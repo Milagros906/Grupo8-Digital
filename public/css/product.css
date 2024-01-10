@@ -228,6 +228,23 @@ ion-icon {
     font-size: 20px;
     vertical-align: middle;
 }
+
+/*Nuevo que hice yo, Rodrigo*/
+/* Estilo para las imágenes en la tabla */
+table img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para las celdas de la tabla */
+table td {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
 /*============FOOTER====================*/
 footer {
     width: 100%;

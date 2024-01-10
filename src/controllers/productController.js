@@ -72,7 +72,7 @@ module.exports = {
         res.render(path.resolve(__dirname, '../views/products/prodEdit.ejs'), { productoEditar });
     },
     update: [
-        upload.single('avatar'), // Cambiado de 'image' a 'avatar'
+        //upload.single('avatar'),
         (req, res) => {
           console.log(req.body);
           let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
@@ -82,7 +82,9 @@ module.exports = {
       
           // Verificar si se cargó un archivo
           if (req.file) {
-            req.body.image = '/images/productos/' + req.file.filename;
+            //const extension = path.extname(req.file.originalname);
+            //req.body.avatar = req.file.filename + extension;
+            req.body.avatar = req.file.filename;
           }
       
           let productosActualizar = productosL.map(producto => {
