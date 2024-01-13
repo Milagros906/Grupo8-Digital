@@ -1,0 +1,27 @@
+[
+    {
+      "nombre": "Juan",
+      "apellido": "González",
+      "dni": "12345678",
+      "correoElectronico": "juan@example.com",
+      "avatar": "avatar1.jpg",
+      "contrasena": "clave123"
+    },
+    {
+      "nombre": "María",
+      "apellido": "Rodríguez",
+      "dni": "87654321",
+      "correoElectronico": "maria@example.com",
+      "avatar": "avatar2.jpg",
+      "contrasena": "secreto456"
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "López",
+      "dni": "54321678",
+      "correoElectronico": "carlos@example.com",
+      "avatar": "avatar3.jpg",
+      "contrasena": "clave789"
+    }
+  ]
+  

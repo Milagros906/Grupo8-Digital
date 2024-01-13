@@ -7,7 +7,7 @@
 
 body {
     background-color: #ebebeb;
-    margin-top: 0;
+    margin-top: 175px;
 }
 
 .login {
@@ -224,12 +224,12 @@ form {
   }
   
 
-/* Ajuste a la casilla de suscripción para que sea más pequeña */
+
 .smaller {
     font-size: 18px;
 }
 
-/* Estilo para los nombres de los campos */
+
 .campo {
     font-weight: bold;
     display: block;
@@ -347,6 +347,11 @@ footer {
     text-decoration: none;
     color: #ffffff;
 }
+
+.errors {
+    color: red;
+}
+
 @media (min-width: 761px) {
     .cajalogo {
        width: 15%;
@@ -364,12 +369,14 @@ footer {
     }
 
     .container{
+        display: flex;
+        flex-direction: row;
         margin-top: 5vb;
     }
 
     body {
         background-color: #ebebeb;
-        margin-top: 10rem;
+        margin-top: 12rem;
     }
 
     .container-body{

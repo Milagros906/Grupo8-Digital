@@ -12,32 +12,46 @@
     <%- include('parciales/header') %>
 
     <div class="container">
-        <form action="#" method="post">
+        <div>     <% if(typeof(errors) != 'undefined'){%>
+            <ul class="alert alert-danger">
+               <% errors.forEach(error => { %>
+                  <li><%= error.msg%></li>
+               <%});%>
+             </ul>
+         <%}%>   
+
+        <form action="" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label class="campo" for="nombre">Nombre:</label>
-                <input class="campo-input" type="text" id="nombre" name="nombre" required>
+                <input class="campo-input" type="text" id="nombre" name="nombre" value="<%= typeof old != 'undefined' ? old.nombre : '' %>">
             </div>
             <div class="form-group">
                 <label class="campo" for="apellido">Apellido:</label>
-                <input class="campo-input" type="text" id="apellido" name="apellido" required>
+                <input class="campo-input" type="text" id="apellido" name="apellido" value="<%= typeof old != 'undefined' ? old.apellido : '' %>">
             </div>
             <div class="form-group">
                 <label class="campo" for="dni">DNI:</label>
-                <input class="campo-input" type="tel" id="dni" name="dni" pattern="[0-9]{8}" required>
+                <input class="campo-input" type="tel" id="dni" name="dni" pattern="[0-9]{8}" value="<%= typeof old != 'undefined' ? old.dni : '' %>">
             </div>
             <div class="form-group">
                 <label class="campo" for="email">Correo electrónico:</label>
-                <input class="campo-input" type="email" id="email" name="email" required>
+                <input class="campo-input" type="email" id="email" name="email" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+            </div>
+            <div class="form-group">
+                <label class="campo" for="email" name="avatar">Avatar</label>
+                <div class="custom-file">
+                    <input type="file"   name="avatar"  placeholder="Debes eligir tu avatar...">
+                </div>    
             </div>
             <div class="form-group">
                 <label class="campo" for="password">Contraseña:</label>
                 <div class="input-container">
-                    <input class="campo-input password" type="password" id="password" name="password" required>
+                    <input class="campo-input password" type="password" id="password" name="password" >
                 </div>
             </div>
             <div class="form-group">
                 <label class="campo" for="repeatPassword">Repetir contraseña:</label>
-                <input class="campo-input password" type="password" id="repeatPassword" name="repeatPassword" required>
+                <input class="campo-input password" type="password" id="repeatPassword" name="repeatPassword" >
             </div>
             <div class="input-container">
                 <button class="eye-button" type="button" id="togglePassword">Mostrar/Ocultar</button>
@@ -50,6 +64,8 @@
             <button class="register" type="submit">Registrarse</button>
         </form>
     </div>
+</div>
+
       
     <%- include('parciales/footer') %>
 
