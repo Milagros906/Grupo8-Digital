@@ -2,11 +2,12 @@ const express = require ('express');
 const userRoutes = express.Router();
 const fs = require ('fs');
 const path = require('path');
-const { body } = require('express-validator');
+//const { body } = require('express-validator');
+const { body, check, validationResult } = require('express-validator');
 const multer = require('multer');
 const bcrypt = require('bcryptjs');
 
-let archivoUsuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/usuarios.json')));
+//let archivoUsuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/usuarios.json')));
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -27,7 +28,7 @@ const validaciones = [
     body('apellido').isLength({min:3}).withMessage('Debes completar el campo de Apellido'),
     body('dni').notEmpty().withMessage('Debes completar el campo DNI'),
     body('email').isEmail().withMessage('Debes completar el campo con tu E-mail'),
-    body('avatar').notEmpty().withMessage('Debes completar el campo con tu avatar'),
+    //body('avatar').notEmpty().withMessage('Debes completar el campo con tu avatar'),
     body('password').isLength({min:6}).withMessage('Este campo debe contener como minimo 6 caracteres'),
     body('repeatPassword').isLength({min:6}).withMessage('Este campo debe contener como minimo 6 caracteres'),
     body('repeatPassword').custom((value, {req}) =>{
@@ -37,10 +38,10 @@ const validaciones = [
             return false;
         }
     }).withMessage('Las contraseñas deben ser iguales'),
-    body('avatar').custom((value, {req})=>{
-        if(req.file != undefined){
+    check('avatar').custom((value, { req }) => {
+        if (req.file != undefined) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }).withMessage('Debe elegir una imagen para su perfil')

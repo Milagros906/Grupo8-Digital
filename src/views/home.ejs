@@ -34,90 +34,139 @@
 
         <section class="cajaproductos">
             <article class="producto">
-                <img src="img/gorraprodu1.jpg">
                 <div class="electrodomesticos">
-                    <div class="preciototal">
-                        <p id="precios">$6.770</p>
-                        <p id="descuentos">40% off</p>
-                    </div>
-                    <h3 class="nombreprodu">Gorra Ikt</h3>
+                <% productosL.forEach(producto => { %>
+                    <% if (producto.id == 1) { %>
+                        <a href="/products/prodDetail/<%= producto.id %>">
+                            <img src="/images/productos/<%= producto.avatar %>" alt="<%= producto.nombreproducto %>">
+                        </a>
+                        <h3 class="nombreprodu"><%= producto.nombreproducto%> </h3>
+                        <div class="preciototal">
+                            <p id="precios">$<%= producto.precio%> </p>
+                            <p id="descuentos">40% off</p>
+                        </div>
+                    <% } %>
+                <% }); %>
                 </div>
             </article>
 
             <article class="producto">
-                <img src="img/gorracelesteyazul.jpg">
                 <div class="electrodomesticos">
-                    <div class="preciototal">
-                        <p id="precios">$6.770</p>
-                        <p id="descuentos">40% off</p>
-                    </div>
-                    <h3 class="nombreprodu">Gorra Ikt</h3>
+                    <% productosL.forEach(producto => { %>
+                        <% if (producto.id == 2) { %>
+                            <a href="/products/prodDetail/<%= producto.id %>">
+                                <img src="/images/productos/<%= producto.avatar %>" alt="<%= producto.nombreproducto %>">
+                            </a>
+                            <h3 class="nombreprodu"><%= producto.nombreproducto %> </h3>
+                            <div class="preciototal">
+                                <p id="precios">$<%= producto.precio %> </p>
+                                <p id="descuentos">40% off</p>
+                            </div>
+                        <% } %>
+                    <% }); %>
+                </div>
+            </article>
+            
+
+            <article class="producto">
+                <div class="electrodomesticos">
+                    <% productosL.forEach(producto => { %>
+                        <% if (producto.id == 3) { %>
+                            <a href="/products/prodDetail/<%= producto.id %>">
+                                <img src="/images/productos/<%= producto.avatar %>" alt="<%= producto.nombreproducto %>">
+                            </a>
+                            <h3 class="nombreprodu"><%= producto.nombreproducto %> </h3>
+                            <div class="preciototal">
+                                <p id="precios">$<%= producto.precio %> </p>
+                                <p id="descuentos">40% off</p>
+                            </div>
+                        <% } %>
+                    <% }); %>
                 </div>
             </article>
 
             <article class="producto">
-                <img src="img/gorramorada.jpg">
                 <div class="electrodomesticos">
-                    <div class="preciototal">
-                        <p id="precios">$6.770</p>
-                        <p id="descuentos">40% off</p>
-                    </div>
-                    <h3 class="nombreprodu">Gorra Ikt</h3>
+                    <% productosL.forEach(producto => { %>
+                        <% if (producto.id == 6) { %>
+                            <a href="/products/prodDetail/<%= producto.id %>">
+                                <img src="/images/productos/<%= producto.avatar %>" alt="<%= producto.nombreproducto %>">
+                            </a>
+                            <h3 class="nombreprodu"><%= producto.nombreproducto %> </h3>
+                            <div class="preciototal">
+                                <p id="precios">$<%= producto.precio %> </p>
+                                <p id="descuentos">40% off</p>
+                            </div>
+                        <% } %>
+                    <% }); %>
                 </div>
             </article>
 
             <article class="producto">
-                <img src="img/gorranaranja.jpg">
                 <div class="electrodomesticos">
-                    <div class="preciototal">
-                        <p id="precios">$6.770</p>
-                        <p id="descuentos">40% off</p>
-                    </div>
-                    <h3 class="nombreprodu">Gorra Ikt</h3>
+                    <% productosL.forEach(producto => { %>
+                        <% if (producto.id == 7) { %>
+                            <a href="/products/prodDetail/<%= producto.id %>">
+                                <img src="/images/productos/<%= producto.avatar %>" alt="<%= producto.nombreproducto %>">
+                            </a>
+                            <h3 class="nombreprodu"><%= producto.nombreproducto %> </h3>
+                            <div class="preciototal">
+                                <p id="precios">$<%= producto.precio %> </p>
+                                <p id="descuentos">40% off</p>
+                            </div>
+                        <% } %>
+                    <% }); %>
                 </div>
             </article>
 
             <article class="producto">
-                <img src="img/gorraprodu1.jpg">
                 <div class="electrodomesticos">
-                    <div class="preciototal">
-                        <p id="precios">$6.770</p>
-                        <p id="descuentos">40% off</p>
-                    </div>
-                    <h3 class="nombreprodu">Gorra Ikt</h3>
+                    <% productosL.forEach(producto => { %>
+                        <% if (producto.id == 8) { %>
+                            <a href="/products/prodDetail/<%= producto.id %>">
+                                <img src="/images/productos/<%= producto.avatar %>" alt="<%= producto.nombreproducto %>">
+                            </a>
+                            <h3 class="nombreprodu"><%= producto.nombreproducto %> </h3>
+                            <div class="preciototal">
+                                <p id="precios">$<%= producto.precio %> </p>
+                                <p id="descuentos">40% off</p>
+                            </div>
+                        <% } %>
+                    <% }); %>
                 </div>
             </article>
 
             <article class="producto">
-                <img src="img/gorracelesteyazul.jpg">
                 <div class="electrodomesticos">
-                    <div class="preciototal">
-                        <p id="precios">$6.770</p>
-                        <p id="descuentos">40% off</p>
-                    </div>
-                    <h3 class="nombreprodu">Gorra Ikt</h3>
+                    <% productosL.forEach(producto => { %>
+                        <% if (producto.id == 9) { %>
+                            <a href="/products/prodDetail/<%= producto.id %>">
+                                <img src="/images/productos/<%= producto.avatar %>" alt="<%= producto.nombreproducto %>">
+                            </a>
+                            <h3 class="nombreprodu"><%= producto.nombreproducto %> </h3>
+                            <div class="preciototal">
+                                <p id="precios">$<%= producto.precio %> </p>
+                                <p id="descuentos">40% off</p>
+                            </div>
+                        <% } %>
+                    <% }); %>
                 </div>
             </article>
 
             <article class="producto">
-                <img src="img/gorramorada.jpg">
                 <div class="electrodomesticos">
-                    <div class="preciototal">
-                        <p id="precios">$6.770</p>
-                        <p id="descuentos">40% off</p>
-                    </div>
-                    <h3 class="nombreprodu">Gorra Ikt</h3>
-                </div>
-            </article>
-
-            <article class="producto">
-                <img src="img/gorranaranja.jpg">
-                <div class="electrodomesticos">
-                    <div class="preciototal">
-                        <p id="precios">$6.770</p>
-                        <p id="descuentos">40% off</p>
-                    </div>
-                    <h3 class="nombreprodu">Gorra Ikt</h3>
+                    <% productosL.forEach(producto => { %>
+                        <% if (producto.id == 4) { %>
+                            <a href="/products/prodDetail/<%= producto.id %>">
+                                <img src="/images/productos/<%= producto.avatar %>" alt="<%= producto.nombreproducto %>">
+                            </a>
+                            <h3 class="nombreprodu"><%= producto.nombreproducto %> </h3>
+                            <div class="preciototal">
+                                <p id="precios">$<%= producto.precio %> </p>
+                                <p id="descuentos">40% off</p>
+                            </div>
+                        <% } %>
+                    <% }); %>
                 </div>
             </article>
         </section>
