@@ -47,11 +47,37 @@ const validaciones = [
     }).withMessage('Debe elegir una imagen para su perfil')
 ];
 
+const validacionesLogin = [
+    body('email').isEmail().withMessage('Agregar un email válido'),
+    body('password').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
+    body('email').custom( (value  ) =>{
+      for (let i = 0; i < archivoUsuarios.length; i++) {
+          if (archivoUsuarios[i].email == value) {
+              return true    
+          }
+      }
+      return false
+    }).withMessage('Usuario no se encuentra registrado...'),
+    body('password').custom( (value, {req}) =>{
+        for (let i = 0; i < archivoUsuarios.length; i++) {
+            if (archivoUsuarios[i].email == req.body.email) {
+                if(bcrypt.compareSync(value, archivoUsuarios[i].password)){
+                  return true;
+                }else{
+                  return false;
+                }
+            }
+        }
+        
+    }).withMessage('Usurio o contraseña no coinciden'),
+]
+
 //importar el controlador
 const userController = require('../controllers/userController');
 
 userRoutes.get('/register', userController.register);
 userRoutes.post('/register', upload.single('avatar'), validaciones, userController.create)
 userRoutes.get('/login', userController.login);
+userRoutes.post('/login', validacionesLogin,userController.ingresar);
 
 module.exports = userRoutes;

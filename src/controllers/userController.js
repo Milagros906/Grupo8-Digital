@@ -36,5 +36,21 @@ module.exports = {
     },
     login: (req, res) => {
         res.render(path.resolve(__dirname, '../views/login.ejs'))
+    },
+    ingresar: (req,res) => {
+        let archivoUsuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/usuarios.json')));
+        let usuarioLogin = archivoUsuarios.find( user => user.email.toUpperCase() == req.body.email.toUpperCase());
+
+        if(usuarioLogin) {
+            const match = bcrypt.copareSync(req.body.password, usuarioLogin.password)
+            if(match){
+                res.redirect('/home')
+            }
+        }
+        return res.render(path.resolve(__dirname, '..views/login.ejs'), {
+            errors: {
+                msg: 'Tu correo y/o tu contraseña son incorrectos.'
+            }
+        })
     }
 }

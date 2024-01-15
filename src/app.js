@@ -23,9 +23,9 @@ app.use(session({
     saveUninitialized: false
 }))
 
-app.use(cookieParser(
+app.use(cookieParser());
 
-))
+
 //requerir archivos de rutas
 const mainRoutes = require('./routes/mainRoutes.js')
 const userRoutes = require('./routes/userRoutes.js')

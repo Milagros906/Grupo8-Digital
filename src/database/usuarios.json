@@ -34,5 +34,14 @@
     "password": "$2a$10$7aO.tcxOmcAsnyeG/maGSelffTlDBd406lyYLHD/Hiwa0Gr0GXa9G",
     "avatar": "1705194366272_img.jpg",
     "role": 1
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Larrea",
+    "dni": "37510278",
+    "email": "jp.larrea11@gmail.com",
+    "password": "$2a$10$750IWf2eWq8QPrfmU8OQd./RPlCR4OjXB8HCZBpHyNDsoSCzaWOdy",
+    "avatar": "1705271191309_img.jpg",
+    "role": 1
   }
 ]
