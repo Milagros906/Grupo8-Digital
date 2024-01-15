@@ -7,7 +7,7 @@ const { body, check, validationResult } = require('express-validator');
 const multer = require('multer');
 const bcrypt = require('bcryptjs');
 
-//let archivoUsuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/usuarios.json')));
+let archivoUsuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/usuarios.json')));
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -69,7 +69,7 @@ const validacionesLogin = [
             }
         }
         
-    }).withMessage('Usurio o contraseña no coinciden'),
+    }).withMessage('Usuario o contraseña no coinciden'),
 ]
 
 //importar el controlador

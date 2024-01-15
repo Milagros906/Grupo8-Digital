@@ -40,17 +40,16 @@ module.exports = {
     ingresar: (req,res) => {
         let archivoUsuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/usuarios.json')));
         let usuarioLogin = archivoUsuarios.find( user => user.email.toUpperCase() == req.body.email.toUpperCase());
-
-        if(usuarioLogin) {
-            const match = bcrypt.copareSync(req.body.password, usuarioLogin.password)
-            if(match){
-                res.redirect('/home')
-            }
+        //console.log(req.body.password);
+        //console.log(usuarioLogin);
+        if (usuarioLogin && bccrypt.compareSync(req.body.password, usuarioLogin.password)) {
+            res.redirect('/');
+        } else {
+            return res.render(path.resolve(__dirname, '../views/login.ejs'), {
+                errors: [{
+                    msg: 'Correo y/o contraseña incorrectos.'
+                }]
+            });
         }
-        return res.render(path.resolve(__dirname, '..views/login.ejs'), {
-            errors: {
-                msg: 'Tu correo y/o tu contraseña son incorrectos.'
-            }
-        })
     }
 }
