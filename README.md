@@ -25,4 +25,4 @@
  + SUGAR BRUSH: https://sugarbrush.com.ar/
 
  **Link de Trello**
- + https://trello.com/b/r14YsO6a/proyecto-gorriao 
+ + https://trello.com/b/e9mN0pWu/gorriado-tablero-de-trabajo
