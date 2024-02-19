@@ -79,5 +79,6 @@ userRoutes.get('/register', userController.register);
 userRoutes.post('/register', upload.single('avatar'), validaciones, userController.create)
 userRoutes.get('/login', userController.login);
 userRoutes.post('/login', validacionesLogin,userController.ingresar);
+userRoutes.get('/profile', userController.profile);
 
 module.exports = userRoutes;

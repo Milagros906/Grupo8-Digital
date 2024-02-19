@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include('parciales/header') %>
+
+
+        <div class="container">
+            <div class="row">
+                <h2>Hola <%= user.nombre%>
+                </h2>
+                <img src="/images/users/<%= user.avatar%>" alt="Foto de perfil" class="profile-image">
+                <h1 class="profile-name"></h1>
+            </div>
+        </div>
+</body>
+
+<%- include('parciales/footer') %>
+</html>
