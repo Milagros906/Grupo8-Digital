@@ -61,5 +61,10 @@ module.exports = {
     },
     profile: (req,res) => {
         return res.render('/profile')
-    }
+    },
+    logout: (req, res)  => { 
+        res.clearCooki('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+        }
 }

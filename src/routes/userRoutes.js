@@ -2,7 +2,6 @@ const express = require ('express');
 const userRoutes = express.Router();
 const fs = require ('fs');
 const path = require('path');
-//const { body } = require('express-validator');
 const { body, check, validationResult } = require('express-validator');
 const multer = require('multer');
 const bcrypt = require('bcryptjs');
@@ -34,16 +33,17 @@ const validaciones = [
     body('repeatPassword').custom((value, {req}) =>{
         if(req.body.password == value){
             return true;
-        }else{
-            return false;
+
         }
+        return false;
+
     }).withMessage('Las contraseñas deben ser iguales'),
     check('avatar').custom((value, { req }) => {
         if (req.file != undefined) {
             return true;
-        } else {
-            return false;
         }
+        return false;
+
     }).withMessage('Debe elegir una imagen para su perfil')
 ];
 
@@ -63,9 +63,8 @@ const validacionesLogin = [
             if (archivoUsuarios[i].email == req.body.email) {
                 if(bcrypt.compareSync(value, archivoUsuarios[i].password)){
                   return true;
-                }else{
-                  return false;
                 }
+                return false;
             }
         }
         
