@@ -21,6 +21,7 @@ const productController = require('../controllers/productController');
 
 productRoutes.get('/carrito', productController.carrito);
 productRoutes.get('/product', productController.product);
+productRoutes.get('/productclient', productController.productclient);
 productRoutes.get('/caredit', productController.caredit);
 productRoutes.get('/caredit2', productController.caredit2);
 //productRoutes.get('/caredit', productController.create);

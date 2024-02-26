@@ -16,6 +16,12 @@ module.exports = {
         res.render(path.resolve(__dirname, '../views/product'), { productosL });
     },
 
+    productclient: (req, res) => {
+        //res.render(path.resolve(__dirname, '../views/product.ejs'))
+        let productosL = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+        res.render(path.resolve(__dirname, '../views/productclient'), { productosL });
+    },
+
     caredit: (req, res) => {
         res.render(path.resolve(__dirname, '../views/caredit.ejs'))
     },
