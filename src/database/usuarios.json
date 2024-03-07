@@ -52,5 +52,14 @@
     "password": "$2a$10$3PkogsZfxXMz/2hZM56RgecNIzsUxyBTfmWZHEK7pg5qS65ztUaBW",
     "avatar": "1708355474526_img.jpg",
     "role": 1
+  },
+  {
+    "nombre": "Ejemplo",
+    "apellido": "ejemplar",
+    "dni": "12124124",
+    "email": "123@123.com",
+    "password": "$2a$10$AH8oacKM7LMYDZwCE/cL1uR1kJGy8TfLYEy4TCduAMvLVXI3b6vfu",
+    "avatar": "1709583396244_img.jpg",
+    "role": 1
   }
 ]

@@ -60,7 +60,8 @@ module.exports = {
 
     },
     profile: (req,res) => {
-        return res.render('/profile')
+        let usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/usuarios.json')));
+        return res.render(path.resolve(__dirname, '../views/profile.ejs'), {'usuarios': usuarios})
     },
     logout: (req, res)  => { 
         res.clearCooki('userEmail');
